@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: ProductService
+  cloud:
+    config:
+      uri: http://127.0.0.1:14000/
+      profile: prod
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:10000/eureka/
