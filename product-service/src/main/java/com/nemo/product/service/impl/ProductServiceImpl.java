@@ -13,6 +13,7 @@ import com.nemo.product.service.ProductService;
 
 @RefreshScope
 @RestController
+@RequestMapping("/p")
 public class ProductServiceImpl implements ProductService {
 
 	@Autowired

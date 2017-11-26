@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.nemo.client.model.ProductData;
 
-@FeignClient(value = "EurekaService", fallback = ProductService.HystrixCalculatorService.class)
+@FeignClient(value = "zuul-gateway", fallback = ProductService.HystrixCalculatorService.class)
 public interface ProductService {
 
-	@RequestMapping(value = "/getProduct", method = RequestMethod.GET)
+	@RequestMapping(value = "/p/getProduct", method = RequestMethod.GET)
 	public ProductData getProduct(String productCode);
 
 	/**

@@ -1,1 +1,1 @@
-include "eureka-server","product-service","frontend","micro-common","zuul-proxy","config-center","price-service"
+include "eureka-server","product-service","frontend","micro-common","zuul-proxy","config-center","price-service","sleuth-server"

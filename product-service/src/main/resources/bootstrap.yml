@@ -1,6 +1,11 @@
 spring:
   application:
     name: ProductService
+  sleuth:
+    sampler:
+      percentage: 1.0
+  zipkin:
+    base-url: http://localhost:15000
   cloud:
     config:
       uri: http://127.0.0.1:14000/

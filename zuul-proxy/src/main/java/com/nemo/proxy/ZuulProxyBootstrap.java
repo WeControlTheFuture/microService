@@ -9,10 +9,10 @@ import com.netflix.zuul.ZuulFilter;
 
 @EnableZuulProxy
 @SpringCloudApplication
-public class Application {
+public class ZuulProxyBootstrap {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		SpringApplication.run(ZuulProxyBootstrap.class, args);
 	}
 
 	@Bean

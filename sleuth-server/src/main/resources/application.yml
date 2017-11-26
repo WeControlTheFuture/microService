@@ -1,20 +1,8 @@
 server:
-  port: 12000
-endpoints:
-  restart:
-    enabled: true
-  shutdown:
-    enabled: true
-  health:
-    sensitive: false
+  port: 15000
 spring:
   application:
-    name: EurekaClient
-  sleuth:
-    sampler:
-      percentage: 1.0
-  zipkin:
-    base-url: http://localhost:15000
+    name: sleuth-server
 management:
   security:
     enabled: false
@@ -26,6 +14,6 @@ eureka:
     lease-expiration-duration-in-seconds: 15
   client:
     healthcheck:
-      enabled: true
-    serviceUrl:
+      enabled: true    
+    serviceUrl: 
        defaultZone: http://127.0.0.1:10000/eureka/

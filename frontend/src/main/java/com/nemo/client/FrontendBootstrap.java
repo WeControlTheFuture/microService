@@ -9,14 +9,14 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 @EnableFeignClients
 @EnableEurekaClient
 @SpringBootApplication
-public class Application {
+public class FrontendBootstrap {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		SpringApplication.run(FrontendBootstrap.class, args);
 	}
 
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-		return builder.sources(Application.class);
+		return builder.sources(FrontendBootstrap.class);
 	}
 
 }

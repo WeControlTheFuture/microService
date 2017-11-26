@@ -7,20 +7,23 @@ endpoints:
     enabled: true
   health:
     sensitive: false
+management:
+  security:
+    enabled: false
 spring:
   application:
     name: zuul-gateway
+  sleuth:
+    sampler:
+      percentage: 1.0
+  zipkin:
+    base-url: http://localhost:15000
 zuul:
   ignored-services: "*"
   routes:
-    api-cal-url:
+    ProductService:
       path: /p/**
-      url: http://127.0.0.1:11000/
-    api-add:
-      path: /pget/**
-      serviceId: EurekaService
-    EurekaService:
-      path: /mycall/**
+      stripPrefix: false ##必须加上，不然路由不到
 eureka:
   instance:
     instance-id: ${spring.application.name}:${server.port}
