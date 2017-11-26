@@ -1,0 +1,15 @@
+server:
+  port: 16001
+fixedDelay: 5000
+spring:
+  application:
+    name: stream-source
+management:
+  security:
+    enabled: false
+spring:
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: source-channel

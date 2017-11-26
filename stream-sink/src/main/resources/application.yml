@@ -1,0 +1,14 @@
+server:
+  port: 16000
+spring:
+  application:
+    name: stream-sink
+management:
+  security:
+    enabled: false
+spring:
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: sink-channel
