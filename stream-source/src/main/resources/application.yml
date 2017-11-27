@@ -4,12 +4,11 @@ fixedDelay: 5000
 spring:
   application:
     name: stream-source
-management:
-  security:
-    enabled: false
-spring:
   cloud:
     stream:
       bindings:
-        input:
+        output:
           destination: source-channel
+management:
+  security:
+    enabled: false

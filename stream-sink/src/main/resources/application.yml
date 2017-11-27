@@ -3,12 +3,11 @@ server:
 spring:
   application:
     name: stream-sink
-management:
-  security:
-    enabled: false
-spring:
   cloud:
     stream:
       bindings:
         input:
           destination: sink-channel
+management:
+  security:
+    enabled: false
